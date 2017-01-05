@@ -5,7 +5,7 @@ from evaluate_trecvid import *
 
 # import reader
 import sys, os
-sys.path.insert(0, '/home/eva/Workspace/icmr_pipeline/bow_pipeline')
+sys.path.insert(0, '/home/deepinsight/retrieval-2016-icmr/bow_pipeline')
 
 from C_bow_representation import GPUCodebook
 from reader import *
@@ -435,30 +435,30 @@ def main():
 	# for sumpooling
 	#dataset_name = "paris"
 	#dataset_name = "paris106k"
-	#dataset_name = "oxford"
+	dataset_name = "oxford"
 	#dataset_name = "oxford105k"
-	dataset_name = "trecvid_subset"
+	#dataset_name = "trecvid_subset"
 
 
 	network="vgg16"
-	list_layers=['conv5_1']
-	path_workspace = "/home/eva/Workspace/icmr_pipeline/"
+	list_layers=['conv5_1', 'conv5_2', 'conv5_3']
+	path_workspace = "/home/deepinsight/retrieval-2016-icmr/"
 	#settings=load_settings("settings.json")
 	settings=load_settings(os.path.join( path_workspace, "{}/settings.json".format(dataset_name)) )
 
-	#dim_input="336_256" #our
+	dim_input="336_256" #our
 	#dim_input="586_586" # babenko
 	#dim_input="672_512" # double ours
 	#dim_input="1024_768" # yannis
-	dim_input="384_288" #trecvid
+	#dim_input="384_288" #trecvid
 	#dim_input="768_576"
 	# check this!!
 
-	#new_dim=(21,16) # ours simple
+	new_dim=(21,16) # ours simple
 	#new_dim=(42,32) # ours bow
 	#new_dim=(32,24)
 	#new_dim=(37,37) # babenko
-	new_dim=(48,36) # trecvid bow
+	#new_dim=(48,36) # trecvid bow
 	#new_dim = (24,18) #trecvid pooling
 	masking = 3
 	augmentation = [0]
@@ -471,13 +471,13 @@ def main():
 
 	pathDB=os.path.join(path_output,'features',network, dim_input)
 
-	pca_model_name =os.path.join(path_models, 'pca',network, dim_input, 'vgg16_conv5_1_25000_512_pca.pkl')
+	pca_model_name =os.path.join(path_models, 'pca',network, dim_input, '---.pkl')
 	#pca_model_name=None
-	model_centroids=os.path.join(path_models,'centroids', network, dim_input,'vgg16_conv5_1_25000_512_pca.pkl')
+	model_centroids=os.path.join(path_models,'centroids', network, dim_input,'---.pkl')
 
 
 	#assignments_db=os.path.join(path_output,'assignments', network, dim_input, 'vgg16_conv5_1_25000_42_32_Weight_512_pca_db')
-	assignments_db=os.path.join(path_output,'assignments', network, dim_input, 'vgg16_conv5_1_25000_48_36_NoWeight_512_pca_db')
+	assignments_db=os.path.join(path_output,'assignments', network, dim_input, '---_db')
 	path_index=os.path.join(path_output,'invertedIndex', network, dim_input)
 
 	input_size=(1,3, int(dim_input.split('_')[0]),  int(dim_input.split('_')[1]) )

@@ -46,7 +46,7 @@ def check_images_to_compute( settings, path_db ):
     """
     Function to check images to compute given an existing leveldb
 
-    Ret: keyframes and labels (horitzontal/vertical)
+    Ret: keyframes and labels (horitzontal/vertical) True means horitzontal
     """
 
     # get all keyframes from settings structure
@@ -67,7 +67,7 @@ def check_images_to_compute( settings, path_db ):
     for key, full, label in zip(keyframes_filename_total, keyframes, labels):
         full_path[key] = full
         label_dic[key] = label
-        print full
+        #print full
 
     count = 0
 

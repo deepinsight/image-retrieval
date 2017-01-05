@@ -101,12 +101,12 @@ pca_dim=512
 Paths
 '''
 # oxford
-#settings=load_settings("/home/eva/Workspace/icmr_pipeline/oxford/settings.json")
+settings=load_settings("/home/deepinsight/retrieval-2016-icmr/oxford/settings.json")
 #settings=load_settings("/home/eva/Workspace/icmr_pipeline/oxford105k/settings.json")
 
 
 # paris
-settings = load_settings("/home/eva/Workspace/icmr_pipeline/paris/settings.json")
+#settings = load_settings("/home/eva/Workspace/icmr_pipeline/paris/settings.json")
 
 #trecvid
 #settings = load_settings("/home/eva/Workspace/icmr_pipeline/trecvid_subset/settings.json")
@@ -120,7 +120,7 @@ dim_input="336_256" # normal oxford
 network="vgg16"
 path_output=str(settings["path_output"])
 pathDB=os.path.join(path_output,'features',network, dim_input)
-list_layers=[ 'conv5_1' ]
+list_layers=[ 'conv5_1', 'conv5_2', 'conv5_3']
 
 pca_model_name =os.path.join(path_output, 'pca',network, dim_input, '---.pkl')
 #pca_model_name=None
@@ -160,7 +160,7 @@ if __name__ == "__main__":
 		features=load_features(keyframes[idx[:10000]], labels[idx[:10000]], reader, N=N)
 		#features=load_features(keyframes, labels, reader, N=1701168)
 		del reader
-		print 'Features loaded! {} {}'.format(features.shape, (features.shape[0]*features.shape[0]*4 / (1024.**3)))
+		print 'Features loaded! {} {}'.format(features.shape, (features.shape[0]*features.shape[1]*4 / (1024.**3)))
 		print 'Training PCA...'
 		t0=time.time()
 		pca_model = trainingPCA(features, n_components=pca_dim, whiten=True, pca_model_name=pca_model_name)

@@ -101,7 +101,7 @@ if __name__=="__main__":
     Paths
     '''
     # oxford
-    settings=load_settings("/home/eva/Workspace/icmr_pipeline/oxford/settings.json")
+    settings=load_settings("/home/deepinsight/retrieval-2016-icmr/oxford/settings.json")
 
     # oxford105K
     #settings=load_settings("/home/eva/Workspace/icmr_pipeline/oxford105k/settings.json")
@@ -127,13 +127,13 @@ if __name__=="__main__":
     path_models=str(settings["path_models"])
 
     pathDB=os.path.join(path_output,'features',network, dim_input)
-    list_layers=['conv5_1']
+    list_layers=['conv5_1', 'conv5_2', 'conv5_3']
 
-    pca_model_name =os.path.join(path_models, 'pca',network, dim_input, 'vgg16_conv5_1_25000_512_pca.pkl')
+    pca_model_name =os.path.join(path_models, 'pca',network, dim_input, '---.pkl')
     #pca_model_name=None
-    model_centroids=os.path.join(path_models,'centroids', network, dim_input,'vgg16_conv5_1_25000_512_pca.pkl')
+    model_centroids=os.path.join(path_models,'centroids', network, dim_input,'---.pkl')
 
-    assignments_db=os.path.join(path_output,'assignments', network, dim_input, 'vgg16_conv5_1_25000_42_32_NO_Weight_512_pca_db')
+    assignments_db=os.path.join(path_output,'assignments', network, dim_input, '---_db')
     path_index=os.path.join(path_output,'invertedIndex', network, dim_input)
 
     keyframes, labels = get_all_keyframes( settings )
@@ -154,10 +154,10 @@ if __name__=="__main__":
 
 
     #new_dim=(48,36) #trecvid
-    new_dim=(42,32)
+    #new_dim=(42,32)
     #new_dim=(37*2,37*2)
 
-    #new_dim=(21,16)
+    new_dim=(21,16)
     weighted_maps=False # Change that for trecvid
     tfidf=False
     path_tfidf=os.path.join(path_output,'tfidf', network, dim_input)
