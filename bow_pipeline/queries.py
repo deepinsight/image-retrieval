@@ -5,7 +5,7 @@ from scipy.ndimage import imread
 from scipy.misc import imsave
 import leveldb
 import caffe
-sys.path.insert(0, '/home/eva/Workspace/icmr_pipeline/bow_pipeline')
+sys.path.insert(0, '/home/yuanyong/python/icmr_pipeline/bow_pipeline')
 from utils import *
 import cv2
 

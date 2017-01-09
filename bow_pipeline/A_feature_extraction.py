@@ -325,8 +325,7 @@ def extract_features( fx, key_frames, storer ):
 
 if __name__ == "__main__":
     # oxford dataset
-    settings = load_settings("/home/deepinsight/retrieval-2016-icmr/oxford/settings.json")
-    pathDB = '/data1/icmr_results/oxford/features/vgg16/336_256/pool5_db'
+    settings = load_settings("/home/deepinsight/blcf/oxford/settings.json")
 
     # oxford105k subset dataset
     #settings = load_settings("/home/eva/Workspace/icmr_pipeline/oxford105k/settings.json")
@@ -339,7 +338,7 @@ if __name__ == "__main__":
 
     # trecvid subset dataset
     #settings = load_settings("/home/eva/Workspace/icmr_pipeline/trecvid_subset/settings.json")
-    #pathDB = '/data1/icmr_results/oxford/features/vgg16/768_576/pool5_db'
+    pathDB = '/data1/icmr_results/oxford/features/vgg16/336_256/conv5_db'
 
     keyframes, labels = check_images_to_compute( settings, pathDB )
     #keyframes, labels = get_from_not_read_txt( "not_read.txt" )

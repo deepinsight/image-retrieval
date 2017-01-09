@@ -26,9 +26,9 @@ OXFORD
 save_pca=True # true when training PCA
 
 # for sumpooling
-dataset_name = "oxford"
+#dataset_name = "oxford"
 #dataset_name = "paris106k"
-#dataset_name = "paris"
+dataset_name = "paris"
 #dataset_name = "oxford105k"
 #dataset_name = "trecvid_subset"
 
@@ -40,22 +40,22 @@ else:
 
 network="vgg16"
 list_layers=['pool5']
-path_workspace = "/home/deepinsight/retrieval-2016-icmr/"
+path_workspace = "/home/eva/Workspace/icmr_pipeline/"
 #settings=load_settings("settings.json")
 settings=load_settings(os.path.join( path_workspace, "{}/settings.json".format(dataset_name)) )
 
-dim_input="336_256" #our
+#dim_input="336_256" #our
 #dim_input="586_586" # babenko
 #dim_input="672_512" # double ours
-#dim_input="1024_768" # yannis
+dim_input="1024_768" # yannis
 #dim_input="384_288" #trecvid
 #dim_input="768_576"
 
 # check this!!
 
-new_dim=(21,16) # ours simple
+#new_dim=(21,16) # ours simple
 #new_dim=(42,32) # ours bow
-#new_dim=(32,24)
+new_dim=(32,24)
 #new_dim=(37,37) # babenko
 #new_dim=(48,36) # trecvid bow
 #new_dim = (24,18) #trecvid pooling
@@ -65,8 +65,8 @@ path_store_list = os.path.join( path_workspace, dataset_name,"lists_pooling/{}/{
 
 pca_dim=512
 masking=3
-augmentation=[3]
-QUERY_EXPANSION=True
+augmentation=[0]
+QUERY_EXPANSION=False
 top=[5, 10]
 it=2
 
@@ -199,7 +199,6 @@ class Query_Extractor():
 				print "adding layer {}, total shape {}".format( layer, features_.shape )
 
 		# normalize feature
-                features_=features_.reshape(1,-1)
 		features =  normalize( features_ )
 		del features_
 		print "check features -- ", features.shape, '  ',  np.sqrt( np.sum(features**2) )

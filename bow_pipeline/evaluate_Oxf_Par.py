@@ -28,7 +28,7 @@ def evaluate_results( path_workspace, settings, path_lists=None ):
 		query_names = ["all_souls", "ashmolean", "balliol","bodleian", "christ_church", "cornmarket","hertford","keble","magdalen","pitt_rivers","radcliffe_camera"]
 
 	elif settings["dataset"] == "paris":
-		path_gt = r"/data1/datasets/oxford_buildings/gt_files"
+		path_gt = r"/media/eva/Eva\ Data/Datasets/Paris_dataset/gt_data"
 		query_names = ["defense", "eiffel","invalides", "louvre", "moulinrouge","museedorsay","notredame","pantheon","pompidou","sacrecoeur", "triomphe"]
 
 
@@ -72,7 +72,7 @@ def evaluate_one_frame( frame, path_workspace, settings, path_lists=None ):
         query_names = ["all_souls", "ashmolean", "balliol","bodleian", "christ_church", "cornmarket","hertford","keble","magdalen","pitt_rivers","radcliffe_camera"]
 
     elif settings["dataset"] == "paris":
-        path_gt = r"/data1/datasets/oxford_buildings/gt_files"
+        path_gt = r"/media/eva/Eva\ Data/Datasets/Paris_dataset/gt_data"
         query_names = ["defense", "eiffel","invalides", "louvre", "moulinrouge","museedorsay","notredame","pantheon","pompidou","sacrecoeur", "triomphe"]
 
 

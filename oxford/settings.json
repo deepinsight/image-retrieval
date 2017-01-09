@@ -2,25 +2,25 @@
 	"Feature_extractors":
 		{
 			"vgg16":{
-				"prototxt":"/home/deepinsight/retrieval-2016-icmr/bow_pipeline/models/vgg_16/vgg16_pool5.prototxt",
-				"caffemodel": "/home/deepinsight/retrieval-2016-icmr/bow_pipeline/models/vgg_16/VGG_ILSVRC_16_layers.caffemodel",
+				"prototxt":"/home/deepinsight/blcf/bow_pipeline/models/vgg_16/vgg16_pool5.prototxt",
+				"caffemodel": "/home/deepinsight/blcf/bow_pipeline/models/vgg_16/VGG_ILSVRC_16_layers.caffemodel",
 				"meanValue":[103.939, 116.779, 123.68]
                 },
 
 			"vgg19":{
-				"prototxt":"/home/deepinsight/retrieval-2016-icmr/bow_pipeline/models/vgg_19/vgg19_pool5.prototxt",
-				"caffemodel": "/home/deepinsight/retrieval-2016-icmr/bow_pipeline/models/vgg_19/VGG_ILSVRC_19_layers.caffemodel",
+				"prototxt":"/home/eva/Workspace/icmr_pipeline/bow_pipeline/models/vgg_19/vgg19_pool5.prototxt",
+				"caffemodel": "/home/eva/Workspace/icmr_pipeline/bow_pipeline/models/vgg_19/VGG_ILSVRC_19_layers.caffemodel",
 				"meanValue":[103.939, 116.779, 123.68]
                 }
 		},
 	"Feature_extractor":"vgg16",
-	"Layer_output":["conv5_1", "conv5_2", "conv5_3"],
+	"Layer_output":["conv5_1","conv5_2","conv5_3"],
 	"featuresDB":"/data1/icmr_results/oxford/features",
 	"path_images":"/data1/datasets/oxford_buildings/images",
 	"path_queries":"/data1/datasets/oxford_buildings/images",
 	"path_gt_files":"/data1/datasets/oxford_buildings/gt_files",
-	"keyframesHoritzontal":"/home/deepinsight/retrieval-2016-icmr/oxford/list_oxford_horitzontal.txt",
-	"keyframesVertical":"/home/deepinsight/retrieval-2016-icmr/oxford/list_oxford_vertical.txt",
+	"keyframesHoritzontal":"/home/deepinsight/blcf/oxford/list_oxford_horitzontal.txt",
+	"keyframesVertical":"/home/deepinsight/blcf/oxford/list_oxford_vertical.txt",
 	"input_size":[2 ,3, 336, 256],
 	"dim_input":"336_256",
 	"dim_maps":[21,16],
