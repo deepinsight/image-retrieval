@@ -1,48 +1,5 @@
 # Bags of Local Convolutional Features for Scalable Instance Search
 
-| ![Logo Icmr][icmrlogo] | [Best Poster Award](http://www.icmr2016.com/awards.html) at the [ACM International Conference on Multimedia Retrieval (ICMR) 2016](http://www.icmr2016.com/index.html)   |
-|:-:|---|
-
-[icmrlogo]: https://raw.githubusercontent.com/evamohe/BoW_CNN_InstanceSearch/master/authors/logo_1.jpg?token=AHPpwJEFJz9ZB5Q5RyZ_O6HuU7_S2yp-ks5X1vMgwA%3D%3D
-
-| ![Eva Mohedano][EvaMohedano-photo] | ![Amaia Salvador][AmaiaSalvador-photo] | ![Kevin McGuinness][KevinMcGuinness-photo] |  ![Xavier Giro-i-Nieto][XavierGiro-photo] | ![Noel O'Connor][NoelOConnor-photo]  | ![Ferran Marques][FerranMarques-photo]|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| [Eva Mohedano][EvaMohedano-web]  | [Amaia Salvador][AmaiaSalvador-photo] | [Kevin McGuinness][KevinMcGuinness-web]   | [Xavier Giro-i-Nieto][XavierGiro-web]   | [Noel O'Connor][NoelOConnor-web]   | [ Ferran Marques][FerranMarques-web]  |
-
-[EvaMohedano-web]: https://www.insight-centre.org/users/eva-mohedano
-[AmaiaSalvador-web]: https://imatge.upc.edu/web/people/amaia-salvador
-[KevinMcGuinness-web]: https://www.insight-centre.org/users/kevin-mcguinness
-[XavierGiro-web]: https://imatge.upc.edu/web/people/xavier-giro
-[NoelOConnor-web]: https://www.insight-centre.org/users/noel-oconnor
-[FerranMarques-web]: https://imatge.upc.edu/web/people/ferran-marques
-
-
-[EvaMohedano-photo]: https://raw.githubusercontent.com/imatge-upc/retrieval-2016-lostobject/master/authors/Eva.jpg?token=AKsMd4iuttxHH44mYL3mPpJEtSvXVXF8ks5Xe-AWwA%3D%3D "Eva Mohedano"
-[AmaiaSalvador-photo]: https://raw.githubusercontent.com/evamohe/BoW_CNN_InstanceSearch/master/authors/salvador.jpg?token=AHPpwCjeOzq3duY0lkLTXEe8H7giXJEPks5X1vG2wA%3D%3D "Amaia Salvador" 
-[KevinMcGuinness-photo]: https://raw.githubusercontent.com/imatge-upc/retrieval-2016-lostobject/master/authors/Kevin.jpg?token=AKsMd4VU31T7Bh8CztufWEWNudazbB_Uks5Xe-AxwA%3D%3D "Kevin McGuinness"
-[XavierGiro-photo]: https://raw.githubusercontent.com/evamohe/BoW_CNN_InstanceSearch/master/authors/giro.jpg?token=AHPpwDdVdPYfMIwMBgHbjK9pPMJva1GOks5X1vHIwA%3D%3D "Xavier Giro-i-Nieto"
-[NoelOConnor-photo]: https://raw.githubusercontent.com/imatge-upc/retrieval-2016-lostobject/master/authors/Noel.jpg?token=AKsMdyemO5eJke9B9rqdRtA7otJscq1wks5Xe-BEwA%3D%3D "Noel O'Connor"
-[FerranMarques-photo]: https://raw.githubusercontent.com/evamohe/BoW_CNN_InstanceSearch/master/authors/marques.jpg?token=AHPpwN3NJU0PqS8i-r2Ng7TpRjlQV22vks5X1vHWwA%3D%3D
-
-A joint collaboration between:
-
-| ![logo-insight] | ![logo-dcu] | ![logo-upc] | ![logo-etsetb] | ![logo-gpi] | 
-|:-:|:-:|:-:|:-:|:-:|
-| [Insight Centre for Data Analytics][insight-web] | [Dublin City University (DCU)][dcu-web]  |[Universitat Politecnica de Catalunya (UPC)][upc-web]   | [UPC ETSETB TelecomBCN][etsetb-web]  | [UPC Image Processing Group][gpi-web] | 
-
-[insight-web]: https://www.insight-centre.org/ 
-[dcu-web]: http://www.dcu.ie/
-[upc-web]: http://www.upc.edu/?set_language=en 
-[etsetb-web]: https://www.etsetb.upc.edu/en/ 
-[gpi-web]: https://imatge.upc.edu/web/ 
-
-
-[logo-insight]: https://raw.githubusercontent.com/imatge-upc/saliency-2016-cvpr/master/logos/insight.jpg "Insight Centre for Data Analytics"
-[logo-dcu]: https://raw.githubusercontent.com/imatge-upc/saliency-2016-cvpr/master/logos/dcu.png "Dublin City University"
-[logo-upc]: https://raw.githubusercontent.com/imatge-upc/saliency-2016-cvpr/master/logos/upc.jpg "Universitat Politecnica de Catalunya"
-[logo-etsetb]: https://raw.githubusercontent.com/imatge-upc/saliency-2016-cvpr/master/logos/etsetb.png "ETSETB TelecomBCN"
-[logo-gpi]: https://raw.githubusercontent.com/imatge-upc/saliency-2016-cvpr/master/logos/gpi.png "UPC Image Processing Group"
-
 ## Abstract 
 This work proposes a simple instance retrieval pipeline based on encoding the convolutional features of CNN using the bag of words aggregation scheme (BoW). Assigning each local array of activations in a convolutional layer to a visual word produces an assignment map, a compact representation that relates regions of an image with a visual word. We use the assignment map for fast spatial reranking, obtaining object localizations that are used for query expansion. We demonstrate the suitability of the BoW representation based on local CNN features for instance retrieval, achieving competitive performance on the Oxford and Paris buildings benchmarks. We show that our proposed system for CNN feature aggregation with BoW outperforms state-of-the-art techniques using sum pooling at a subset of the challenging TRECVid INS benchmark.
 
