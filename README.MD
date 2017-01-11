@@ -4,53 +4,6 @@
 This work proposes a simple instance retrieval pipeline based on encoding the convolutional features of CNN using the bag of words aggregation scheme (BoW). Assigning each local array of activations in a convolutional layer to a visual word produces an assignment map, a compact representation that relates regions of an image with a visual word. We use the assignment map for fast spatial reranking, obtaining object localizations that are used for query expansion. We demonstrate the suitability of the BoW representation based on local CNN features for instance retrieval, achieving competitive performance on the Oxford and Paris buildings benchmarks. We show that our proposed system for CNN feature aggregation with BoW outperforms state-of-the-art techniques using sum pooling at a subset of the challenging TRECVid INS benchmark.
 
 
-## Publication
-
-Find our paper at [ACM Digital Library](http://dx.doi.org/10.1145/2911996.2912061), [arXiv](https://arxiv.org/abs/1604.04653) and [DCU Doras](http://doras.dcu.ie/21175/).
-
-![Image of the paper](https://raw.githubusercontent.com/evamohe/BoW_CNN_InstanceSearch/master/docs/image.jpeg?token=AHPpwMnNlL9yWB3Lt7588wSrlzim1tO4ks5X1vazwA%3D%3D)
-
-Please cite with the following Bibtex code:
-
-````
-@inproceedings{Mohedano:2016:BLC:2911996.2912061,
- author = {Mohedano, Eva and McGuinness, Kevin and O'Connor, Noel E. and Salvador, Amaia and Marques, Ferran and Giro-i-Nieto, Xavier},
- title = {Bags of Local Convolutional Features for Scalable Instance Search},
- booktitle = {Proceedings of the 2016 ACM on International Conference on Multimedia Retrieval},
- series = {ICMR '16},
- year = {2016},
- isbn = {978-1-4503-4359-6},
- location = {New York, New York, USA},
- pages = {327--331},
- numpages = {5},
- url = {http://doi.acm.org/10.1145/2911996.2912061},
- doi = {10.1145/2911996.2912061},
- acmid = {2912061},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {bag of words, convolutional neural networks, instance retrieval},
-} 
-````
-
-## Best Poster Award at ICMR 2016
-
-![https://github.com/imatge-upc/retrieval-2016-icmr/raw/master/docs/icmr2016-poster.pdf](https://github.com/imatge-upc/retrieval-2016-icmr/blob/master/docs/poster700x583.png?raw=true)
-
-![Poster presenters](https://github.com/imatge-upc/retrieval-2016-icmr/blob/master/authors/PosterPresenters.jpg?raw=true)
-
-## Talk on video
-
-<iframe src="https://player.vimeo.com/video/165478041" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/165478041">2016-05-Seminar-AmaiaSalvador-DeepVision</a> from <a href="https://vimeo.com/gpi">Image Processing Group</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-This talk also covers our paper ["Faster R-CNN features for Instance Search"](http://imatge-upc.github.io/retrieval-2016-deepvision/) at CVPR 2016 Workshop on DeepVision.
-
-## Slides
-
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/lZzb4HdY6OEZ01" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/xavigiro/convolutional-features-for-instance-search" title="Convolutional Features for Instance Search" target="_blank">Convolutional Features for Instance Search</a> </strong> from <strong><a href="//www.slideshare.net/xavigiro" target="_blank">Xavier Giro</a></strong> </div>
-
-These slides also cover our paper ["Faster R-CNN features for Instance Search"](http://imatge-upc.github.io/retrieval-2016-deepvision/) at CVPR 2016 Workshop on DeepVision.
-
 ## Code Instructions
 
 ### Description
